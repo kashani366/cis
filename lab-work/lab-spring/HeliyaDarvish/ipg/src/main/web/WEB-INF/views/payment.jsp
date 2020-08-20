@@ -9,12 +9,28 @@
 <html>
   <head>
     <title>Payment page</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <form name="payment" method="post" action="ipg">
-      <input type="text" name="merchantId" placeholder="شناسه پذیرنده">
-      <input type="number" name="amount" placeholder="مبلغ قابل پرداخت">
-      <input type="submit" name="پرداخت">
-    </form>
+
+    <div class="panel panel-primary" style="margin: 100px;">
+      <div class="panel-heading text-center">اطلاعات پرداخت</div>
+      <div class="panel-body" style="direction: rtl;">
+
+        <form name="payment" method="post" action="ipg">
+          <div class="form-group">
+            <label for="merchantId">شناسه پذیرنده:</label>
+            <input type="text" name="merchantId" id="merchantId" placeholder="شناسه پذیرنده" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="amount">مبلغ قابل پرداخت:</label>
+            <input type="number" name="amount" id="amount" placeholder="مبلغ قابل پرداخت" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-info">پرداخت</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

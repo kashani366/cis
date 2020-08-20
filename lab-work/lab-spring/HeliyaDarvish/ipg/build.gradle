@@ -13,4 +13,7 @@ dependencies {
     implementation 'javax.servlet:jstl:1.2'
     implementation 'org.springframework:spring-webmvc:5.2.8.RELEASE'
     testImplementation 'junit:junit:4.12'
+    implementation 'org.webjars:bootstrap:3.3.6'
+    implementation 'org.webjars:bootstrap-datepicker:1.0.1'
+    implementation 'org.webjars:jquery:1.9.1'
 }
