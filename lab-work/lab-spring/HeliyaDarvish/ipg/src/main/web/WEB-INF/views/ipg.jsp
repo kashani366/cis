@@ -23,11 +23,12 @@
             <div class="panel-body" style="direction: rtl;">
                 <div>
                     <span>مبلغ قابل پرداخت:</span>
-                    <span>3000 ریال</span>
+                    <span>${amount}</span>
+                    <span>ریال</span>
                 </div>
                 <div>
                     <span>نام پذیرنده:</span>
-                    <span>هلیا درویش</span>
+                    <span>${merchantId}</span>
                 </div>
             </div>
         </div>
