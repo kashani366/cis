@@ -14,22 +14,36 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <label class="navbar-brand">IPG</label>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/payment">Pay</a></li>
+          <li><a href="/addMerchant">Add Merchant</a></li>
+          <li><a href="/addCustomer">Add Customer</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <div class="panel panel-primary" style="margin: 100px;">
-      <div class="panel-heading text-center">اطلاعات پرداخت</div>
-      <div class="panel-body" style="direction: rtl;">
-
-        <form name="payment" method="post" action="ipg">
-          <div class="form-group">
-            <label for="merchantId">شناسه پذیرنده:</label>
-            <input type="text" name="merchantId" id="merchantId" placeholder="شناسه پذیرنده" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="amount">مبلغ قابل پرداخت:</label>
-            <input type="number" name="amount" id="amount" placeholder="مبلغ قابل پرداخت" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-info">پرداخت</button>
-        </form>
+    <div class="container">
+      <div class="panel panel-primary" style="margin: 100px;">
+        <div class="panel-heading text-center">payment info</div>
+        <div class="panel-body">
+          <form name="payment" method="post" action="ipg">
+            <div class="form-group">
+              <label for="merchantId">Merchant Id:</label>
+              <input type="text" name="merchantId" id="merchantId" placeholder="Enter merchant id" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="amount">Amount:</label>
+              <input type="number" name="amount" id="amount" placeholder="Enter amount" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-info">pay</button>
+          </form>
+        </div>
       </div>
     </div>
   </body>

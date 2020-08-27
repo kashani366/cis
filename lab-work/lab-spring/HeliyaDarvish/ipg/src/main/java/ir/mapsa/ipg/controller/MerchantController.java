@@ -31,6 +31,11 @@ public class MerchantController {
         return "addMerchant";
     }
 
+    @RequestMapping("/addCustomer")
+    public String addCustomer(){
+        return "addCustomer";
+    }
+
     @RequestMapping("/payment")
     public String payment(){
         return "payment";

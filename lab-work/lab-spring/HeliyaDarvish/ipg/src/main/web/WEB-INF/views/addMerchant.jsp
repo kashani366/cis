@@ -13,8 +13,21 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </head>
-
     <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <label class="navbar-brand">IPG</label>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/payment">Pay</a></li>
+                    <li><a href="/addMerchant">Add Merchant</a></li>
+                    <li><a href="/addCustomer">Add Customer</a></li>
+                </ul>
+            </div>
+        </nav>
+
         <div class="container">
             <form action="#" method="post">
                 <div><h3>Add Merchant</h3></div>

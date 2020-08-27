@@ -14,7 +14,22 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <a href="/payment">pay</a>
-    <a href="/addMerchant">add new merchant</a>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <label class="navbar-brand">IPG</label>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/payment">Pay</a></li>
+                <li><a href="/addMerchant">Add Merchant</a></li>
+                <li><a href="/addCustomer">Add Customer</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to IPG</h1>
+    </div>
 </body>
 </html>

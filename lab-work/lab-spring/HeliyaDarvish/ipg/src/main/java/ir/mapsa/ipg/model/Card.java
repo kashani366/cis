@@ -2,26 +2,26 @@ package ir.mapsa.ipg.model;
 
 import java.util.Date;
 
-public class Cart {
-    private int cartNo;
-    private int secondPass;
+public class Card {
+    private long cardNo;
+    private long secondPass;
     private int cvv2;
     private Date expirationDate;
     private Long balance;
 
-    public Cart(int cartNo, int secondPass, int cvv2, Date expirationDate) {
-        this.cartNo = cartNo;
+    public Card(int cardNo, int secondPass, int cvv2, Date expirationDate) {
+        this.cardNo = cardNo;
         this.secondPass = secondPass;
         this.cvv2 = cvv2;
         this.expirationDate = expirationDate;
         this.balance = 10000L;
     }
 
-    public int getCartNo() {
-        return cartNo;
+    public long getCardNo() {
+        return cardNo;
     }
 
-    public int getSecondPass() {
+    public long getSecondPass() {
         return secondPass;
     }
 

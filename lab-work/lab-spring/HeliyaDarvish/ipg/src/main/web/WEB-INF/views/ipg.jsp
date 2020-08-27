@@ -15,19 +15,34 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="text-center"><h2>پرداخت اینترنتی مپصا</h2></div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <label class="navbar-brand">IPG</label>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/payment">Pay</a></li>
+                <li><a href="/addMerchant">Add Merchant</a></li>
+                <li><a href="/addCustomer">Add Customer</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container container-fluid">
+        <div class="text-center"><h2>MAPSA IPG</h2></div>
 
         <div class="panel panel-primary">
-            <div class="panel-heading text-center">اطلاعات پرداخت</div>
-            <div class="panel-body" style="direction: rtl;">
+            <div class="panel-heading text-center">payment info</div>
+            <div class="panel-body">
                 <div>
-                    <span>مبلغ قابل پرداخت:</span>
+                    <span>Amount:</span>
                     <span>${amount}</span>
-                    <span>ریال</span>
+                    <span>Rial</span>
                 </div>
                 <div>
-                    <span>نام پذیرنده:</span>
+                    <span>Merchant Name:</span>
                     <span>${merchantId}</span>
                 </div>
             </div>
@@ -36,58 +51,53 @@
         <div class="row">
             <div class="col-sm-6" >
                 <div class="panel panel-primary">
-                    <div class="panel-heading text-center">راهنمای انجام تراکنش اینترنتی</div>
-                    <div class="panel-body" style="direction: rtl;">
-                        Hi
+                    <div class="panel-heading text-center">Card info</div>
+                    <div class="panel-body">
+
+                        <form name="cartInfo" action="pay" method="POST" >
+                            <div class="form-group">
+                                <label for="cardNo">Card Number:</label>
+                                <input type="number" class="form-control" id="cardNo" placeholder="Enter card no" name="cardNo">
+                            </div>
+                            <div class="form-group">
+                                <label for="secondPass">Second Password:</label>
+                                <input type="password" class="form-control" id="secondPass" placeholder="Enter second pass" name="secondPass">
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv2">CVV2:</label>
+                                <input type="number" class="form-control" id="cvv2" placeholder="Enter CVV2" name="cvv2">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Expiration Date:</label>
+                                <div class="row" style="padding: 15px;">
+                                    <input type="number" name="expirationDateMoth" class="col-sm-5" placeholder="month">
+                                    <input type="number" name="expirationDateYear" class="col-sm-5" style="margin-left: 15px;" placeholder="year">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email (optional):</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                            </div>
+
+                            <button type="submit" class="btn btn-info">pay</button>
+                            <button type="reset" class="btn btn-danger">cancel</button>
+                        </form>
+
                     </div>
                 </div>
             </div>
 
             <div class="col-sm-6" >
                 <div class="panel panel-primary">
-                    <div class="panel-heading text-center">اطلاعات کارت</div>
-                    <div class="panel-body" style="direction: rtl;">
-
-                        <form name="cartInfo" action="pay" method="POST" >
-                            <div class="form-group">
-                                <label for="cartNo">شماره کارت:</label>
-                                <input type="number" class="form-control" id="cartNo" placeholder="شماره کارت" name="cartNo">
-                            </div>
-                            <div class="form-group">
-                                <label for="secondPass">رمز دوم کارت:</label>
-                                <input type="password" class="form-control" id="secondPass" placeholder="رمز دوم کارت" name="secondPass">
-                            </div>
-                            <div class="form-group">
-                                <label for="cvv2">CVV2:</label>
-                                <input type="number" class="form-control" id="cvv2" placeholder="CVV2" name="cvv2">
-                            </div>
-
-                            <div class="form-group">
-                                <label>تاریخ انقضا:</label>
-                                <div class="row" style="direction: rtl; padding: 15px;">
-                                    <input type="number" name="expirationDateMoth" class="col-sm-5" placeholder="ماه">
-                                    <input type="number" name="expirationDateYear" class="col-sm-5" style="margin-left: 15px;" placeholder="سال">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="securityCode">کد امنیتی:</label>
-                                <input type="number" class="form-control" id="securityCode" name="securityCode" placeholder="کد امنیتی">
-                            </div>
-
-
-                            <div class="form-group">
-                                <label for="email">ایمیل (اختیاری):</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="ایمیل">
-                            </div>
-
-                            <button type="submit" class="btn btn-info">پرداخت</button>
-                            <button type="reset" class="btn btn-danger">انصراف</button>
-                        </form>
-
+                    <div class="panel-heading text-center">IPG Help</div>
+                    <div class="panel-body">
+                        Help doc
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </body>
